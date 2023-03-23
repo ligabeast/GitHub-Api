@@ -1,0 +1,162 @@
+body {
+  background-image: linear-gradient(to bottom right, rgb(22, 21, 21), purple);
+  height: 100vh;
+  width: 100vw;
+}
+.Search-Container {
+  background-color: rgba(53, 50, 50, 0.404);
+  position: absolute;
+  display: grid;
+  border-radius: 1rem;
+  padding: 2rem;
+  top: 10%;
+  bottom: 80%;
+  left: 20%;
+  right: 20%;
+}
+.Search-Input {
+  color: white;
+  text-align: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.Profile-Container-Right {
+  padding-top: 10%;
+}
+
+.Profile-Container {
+  background-color: white;
+  background-color: rgba(53, 50, 50, 0.404);
+  position: absolute;
+  display: grid;
+  grid-template-columns: 20% 75%;
+  gap: 5%;
+  grid-template-rows: 60% 100%;
+  border-radius: 2rem;
+  padding: 2rem;
+  top: 30%;
+  left: 20%;
+  right: 20%;
+}
+
+.Profile-Picture {
+  border-radius: 50%;
+  height: 100%;
+}
+
+.Profile-Follower {
+  color: white;
+  margin-bottom: 0px;
+  align-content: center;
+}
+
+.Profile-Information {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.Profile-Bio {
+  color: white;
+  margin-left: -10px;
+  font-size: 1rem;
+}
+
+.Profile-Follower + .Profile-Follower {
+  color: white;
+  margin: 0px;
+}
+
+.Profile-Name {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.Follow-Button {
+  float: right;
+  width: 30%;
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.Follow-Button:hover {
+  background-color: rgb(241, 240, 240);
+}
+
+.Follow-Buttonv:focus {
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.Follower-Container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 3%;
+  padding-bottom: 5%;
+}
+
+.Follower-Items {
+  font-size: 1rem;
+  color: white;
+}
+
+.Repos-Label {
+  display: block;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.Repos-Flex {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.Flex-Items {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.Flex-Items:focus {
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.Flex-Items:hover {
+  background-color: rgb(241, 240, 240);
+}
