@@ -77,7 +77,6 @@ function hideContent() {
 
 searchBar.addEventListener("keyup", (e) => {
   if (e.key == "Enter") {
-    showContent();
     fetchDataProfile()
       .then((response) => {
         if (response.ok) {
@@ -90,6 +89,7 @@ searchBar.addEventListener("keyup", (e) => {
       })
       .then((response) => {
         setProfileAttributes(response);
+        showContent();
 
         fetchDataRepositorys()
           .then((repos) => repos.json())
