@@ -3,6 +3,28 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+.hide {
+  display: none;
+}
+
+.default {
+  background-color: white;
+  background-color: rgba(53, 50, 50, 0.404);
+  position: absolute;
+  display: grid;
+  border-radius: 2rem;
+  padding: 2rem;
+  top: 30%;
+  left: 20%;
+  right: 20%;
+}
+
+.default-label {
+  color: white;
+  font-style: italic;
+}
+
 .Search-Container {
   background-color: rgba(53, 50, 50, 0.404);
   position: absolute;

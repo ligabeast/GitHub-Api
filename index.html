@@ -7,52 +7,55 @@
   </head>
   <body>
     <div class="Search-Container">
-      <input
-        type="Text"
-        class="Search-Input"
-        placeholder="Search Username..."
-      />
+      <input type="Text" class="Search-Input" placeholder="Search Username" />
     </div>
-    <div class="Profile-Container">
-      <div class="Profile-Container-Left">
-        <img src="Example.jpg" class="Profile-Picture" />
-      </div>
-      <div class="Profile-Container-Right">
-        <div>
-          <a class="Profile-Name">Baran Özbey</a>
-          <input type="button" class="Follow-Button" value="Follow" />
+    <div class="show hide">
+      <div class="Profile-Container">
+        <div class="Profile-Container-Left">
+          <img src="Example.jpg" class="Profile-Picture" />
         </div>
-        <p class="Profile-Bio">
-          I study Computer Science in germany and i´m 20y/o
-        </p>
-      </div>
-      <div></div>
-      <div class="Profile-Container-Right2">
-        <div class="Follower-Container">
-          <h1 class="Follower-Items">
-            Follower:
-            <span class="Follower">20</span>
-          </h1>
-          <h1 class="Follower-Items">
-            Following:
-            <span class="Following">20</span>
-          </h1>
-          <h1 class="Follower-Items">
-            Repositorys:
-            <span class="Repositorys">20</span>
-          </h1>
+        <div class="Profile-Container-Right">
+          <div>
+            <a class="Profile-Name">Baran Özbey</a>
+            <input type="button" class="Follow-Button" value="Follow" />
+          </div>
+          <p class="Profile-Bio">
+            I study Computer Science in germany and i´m 20y/o
+          </p>
         </div>
-        <div class="Repositorys">
-          <label class="Repos-Label">Repos:</label>
-          <div class="Repos-Flex">
-            <span>
-              <input type="button" value="First-Project" class="Flex-Items"
-            /></span>
-            <span>
-              <input type="button" value="Hello-World" class="Flex-Items"
-            /></span>
+        <div></div>
+        <div class="Profile-Container-Right2">
+          <div class="Follower-Container">
+            <h1 class="Follower-Items">
+              Follower:
+              <span class="Follower">20</span>
+            </h1>
+            <h1 class="Follower-Items">
+              Following:
+              <span class="Following">20</span>
+            </h1>
+            <h1 class="Follower-Items">
+              Repositorys:
+              <span class="Repositorys">20</span>
+            </h1>
+          </div>
+          <div class="Repositorys">
+            <label class="Repos-Label">Repos:</label>
+            <div class="Repos-Flex">
+              <span>
+                <input type="button" value="First-Project" class="Flex-Items"
+              /></span>
+              <span>
+                <input type="button" value="Hello-World" class="Flex-Items"
+              /></span>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="empty">
+      <div class="default">
+        <h1 class="default-label">Nobody found!...</h1>
       </div>
     </div>
     <script src="app.js"></script>

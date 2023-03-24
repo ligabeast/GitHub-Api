@@ -6,6 +6,8 @@ const follower = document.querySelector(".Follower");
 const following = document.querySelector(".Following");
 const repositorys = document.querySelector(".Repositorys");
 const repositorysAppend = document.querySelector(".Repos-Flex");
+const emptyContainer = document.querySelector(".empty");
+const showContainer = document.querySelector(".show");
 
 async function fetchDataProfile() {
   const api = "https://api.github.com/users/";
@@ -58,10 +60,29 @@ function setRepositorys(object) {
   });
 }
 
+function showContent() {
+  emptyContainer.classList.add("hide");
+  showContainer.classList.remove("hide");
+}
+
+function hideContent() {
+  emptyContainer.classList.remove("hide");
+  showContainer.classList.add("hide");
+}
+
 searchBar.addEventListener("keyup", (e) => {
   if (e.key == "Enter") {
+    showContent();
     fetchDataProfile()
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          hideContent();
+          throw new Error("Pofile not Found!");
+          return;
+        }
+      })
       .then((response) => {
         setProfileAttributes(response);
 
@@ -71,6 +92,9 @@ searchBar.addEventListener("keyup", (e) => {
             setRepositorys(repos);
           });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        hideContent();
+      });
   }
 });
