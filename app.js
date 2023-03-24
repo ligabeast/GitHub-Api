@@ -8,6 +8,7 @@ const repositorys = document.querySelector(".Repositorys");
 const repositorysAppend = document.querySelector(".Repos-Flex");
 const emptyContainer = document.querySelector(".empty");
 const showContainer = document.querySelector(".show");
+const followButton = document.querySelector(".Follow-Button");
 
 async function fetchDataProfile() {
   const api = "https://api.github.com/users/";
@@ -30,6 +31,10 @@ function setProfileAttributes(object) {
     following: currentFollowing,
     public_repos: currentRepositorys,
   } = object;
+  followButton.onclick = (e) => {
+    const URL = "https://github.com/" + searchBar.value;
+    window.open(URL, "_blank").focus();
+  };
   profilePicture.src = currentProfilePicture;
   fullName.textContent = currentFullName;
   bio.textContent = currentBio;
