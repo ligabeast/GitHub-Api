@@ -32,7 +32,6 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   top: 10%;
-  bottom: 80%;
   left: 20%;
   right: 20%;
 }
@@ -51,18 +50,18 @@ body {
 }
 
 .Profile-Container {
-  background-color: white;
   background-color: rgba(53, 50, 50, 0.404);
   position: absolute;
   display: grid;
   grid-template-columns: 20% 75%;
   gap: 5%;
-  grid-template-rows: 60% 100%;
+  grid-template-rows: 40% auto;
   border-radius: 2rem;
   padding: 2rem;
   top: 30%;
   left: 20%;
   right: 20%;
+  height: 60%;
 }
 
 .Profile-Picture {
@@ -145,12 +144,13 @@ body {
 .Repos-Label {
   display: block;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .Repos-Flex {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -181,4 +181,10 @@ body {
 
 .Flex-Items:hover {
   background-color: rgb(241, 240, 240);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0%;
+  height: 5%;
 }
