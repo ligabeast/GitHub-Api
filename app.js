@@ -22,17 +22,16 @@ async function fetchDataRepositorys() {
   return await fetch(api + username + "/repos");
 }
 
-function setProfileAttributes(object) {
-  const {
-    avatar_url: currentProfilePicture,
-    name: currentFullName,
-    bio: currentBio,
-    followers: currentFollowers,
-    following: currentFollowing,
-    public_repos: currentRepositorys,
-  } = object;
+function setProfileAttributes({
+  avatar_url: currentProfilePicture,
+  name: currentFullName,
+  bio: currentBio,
+  followers: currentFollowers,
+  following: currentFollowing,
+  public_repos: currentRepositorys,
+  html_url: URL,
+}) {
   followButton.onclick = (e) => {
-    const URL = "https://github.com/" + searchBar.value;
     window.open(URL, "_blank").focus();
   };
   profilePicture.src = currentProfilePicture;
@@ -88,6 +87,7 @@ searchBar.addEventListener("keyup", (e) => {
         }
       })
       .then((response) => {
+        console.log(response);
         setProfileAttributes(response);
         showContent();
 
